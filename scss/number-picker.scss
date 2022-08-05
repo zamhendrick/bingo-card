@@ -1,0 +1,23 @@
+section#number_picker_container {
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        tr {
+            td {
+                width: 2rem;
+                height: 2rem;
+                border: 1px solid #303030;
+
+                text-align: center;
+                &.number-drawn {
+                    background-color: #910000;
+                }
+            }
+        }
+    }
+    div#current_draw {
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}

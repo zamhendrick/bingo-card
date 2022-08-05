@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Bingo Card Generator">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bingo, Card, Generator">
+        <meta name="author" content="Zam Hendrick G. Infantado">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Bingo Card Generator by Zam</title>
+
+        <link rel="stylesheet" type="text/css" href="css/master.css">
+        <link rel="stylesheet" type="text/css" href="css/bingo-card.css">
+    </head>
+    <body>
+        <div class="flex flex-direction-column">
+            <section id="bingo_card_container" class="p-2 m-auto">
+                <table id="bingo_card">
+                    <tr>
+                        <td class="special-cell">B</td><td class="special-cell">I</td><td class="special-cell">N</td><td class="special-cell">G</td><td class="special-cell">O</td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td>
+                        <td class="special-cell"><i class="fas fa-star"></i></td>
+                        <td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </table>
+
+                <button class="w-full py-1 mt-1" onclick="clearCellColor()">Clear Colors</button>
+
+                <button class="w-full py-1 mt-1" onclick="generateNumber()">Generate Card</button>
+            </section>
+            <section>
+                <a href="/pages/number-picker/number-picker.html">Number Picker</a>
+            </section>
+        </div>
+        
+        <!-- SCRIPTS -->
+        
+        <script defer src="js/bingo.js"></script>
+    </body>
+</html>

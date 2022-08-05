@@ -1,0 +1,23 @@
+/* CDN */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css';
+
+/* CSS */
+@import 'classes.css';
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+button {
+    cursor: pointer;
+}

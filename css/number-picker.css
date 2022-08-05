@@ -1,0 +1,18 @@
+section#number_picker_container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+section#number_picker_container table tr td {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #303030;
+  text-align: center;
+}
+section#number_picker_container table tr td.number-drawn {
+  background-color: #910000;
+}
+section#number_picker_container div#current_draw {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}/*# sourceMappingURL=number-picker.css.map */
