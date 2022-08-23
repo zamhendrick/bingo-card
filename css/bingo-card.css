@@ -2,6 +2,7 @@ section#bingo_card_container table#bingo_card {
   border-spacing: 0;
   border-collapse: collapse;
 }
+
 section#bingo_card_container table#bingo_card tr td {
   width: 4rem;
   height: 4rem;
@@ -11,12 +12,17 @@ section#bingo_card_container table#bingo_card tr td {
   text-align: center;
   color: #303030;
 }
+
 section#bingo_card_container table#bingo_card tr td:hover {
   cursor: pointer;
 }
-section#bingo_card_container table#bingo_card tr td:not(.special-cell, .colored-cell):hover {
+
+section#bingo_card_container table#bingo_card tr td:hover {
   background-color: #f0f0f0;
 }
+
 section#bingo_card_container table#bingo_card tr td.colored-cell {
   background-color: #910000;
-}/*# sourceMappingURL=bingo-card.css.map */
+  color: white;
+}
+/*# sourceMappingURL=bingo-card.css.map */
