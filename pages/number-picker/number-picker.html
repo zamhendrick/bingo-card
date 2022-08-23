@@ -9,8 +9,28 @@
 
         <title>Bingo Number Picker by Zam</title>
 
-        <link rel="stylesheet" type="text/css" href="/bingo-card/css/master.css">
-        <link rel="stylesheet" type="text/css" href="/bingo-card/css/number-picker.css">
+        <script>
+            const head = document.head
+            const link = document.createElement('link')
+            const link2 = document.createElement('link')
+            link.rel = 'stylesheet'
+            link.type = 'text/css'
+            link2.rel = 'stylesheet'
+            link2.type = 'text/css'
+
+            url = window.location.href
+            if (url.indexOf('github') > -1) {
+                link.href = '/bingo-card/css/master.css'
+                head.appendChild(link)
+                link2.href = '/bingo-card/css/number-picker.css'
+                head.appendChild(link)
+            } else {
+                link.href = '/css/master.css'
+                head.appendChild(link)
+                link2.href = '/css/number-picker.css'
+                head.appendChild(link2)
+            }
+        </script>
     </head>
     <body>
         <div class="flex flex-direction-column">
@@ -112,10 +132,11 @@
                 <div id="current_draw" class="mt-1">
                     <span>BINGO</span>
                 </div>
-                <button class="w-full py-1 mt-1" onclick="pickNumber()">Generate Number</button>
-            </section>
-            <section>
-                <a href="/bingo-card">Go Back</a>
+                <div>
+                    <button class="w-full py-1 mt-1" onclick="pickNumber()">Generate Number</button>
+
+                    <button class="w-full py-1 mt-1" id="go_to_bingo_card_btn">Go Back</button>
+                </div>
             </section>
         </div>
         

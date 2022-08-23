@@ -1,3 +1,5 @@
+const goToBingoCardBtn = document.querySelector('#go_to_bingo_card_btn')
+const url = window.location.href
 let letterB = []
 let letterI = []
 let letterN = []
@@ -41,5 +43,14 @@ function pickNumber() {
             // console.log(bingoCells[cell])
             bingoCells[cell].classList.add('number-drawn')
         }
+    }
+}
+
+goToBingoCardBtn.onclick = () => {
+    console.log('aaa')
+    if (url.indexOf('github') > -1) {
+        window.location.href = '/bingo-card'
+    } else {
+        window.location.href = '/index.html'
     }
 }

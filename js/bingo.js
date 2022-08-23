@@ -4,6 +4,7 @@ const tbody = document.querySelector('#bingo_card tbody');
 const clearCellsBtn = document.querySelector('#clear_cells_btn')
 const generateCardBtn = document.querySelector('#generate_card_btn')
 const goToNumberPickerBtn = document.querySelector('#go_to_number_picker_btn')
+const url = window.location.href
 let numbersGenerated = false;
 
 function generateNumber() {
@@ -52,13 +53,37 @@ function clearCellColor() {
 }
 
 clearCellsBtn.onclick = () => {
-    clearCellColor()
+    if (numbersGenerated) {
+        if (confirm('Are you sure you want to clear the colors?')) {
+            clearCellColor()
+        }
+    }
 }
 
 generateCardBtn.onclick = () => {
-    generateNumber()
+    if (numbersGenerated) {
+        if (confirm('Are you sure you want to generate new card?')) {
+            generateNumber()
+        }
+    } else {
+        generateNumber()
+    }
 }
 
 goToNumberPickerBtn.onclick = () => {
-    document.location.href = '/bingo-card/pages/number-picker/number-picker.html'
+    if (numbersGenerated) {
+        if (confirm('Are you sure you want to leave your card?')) {
+            if (url.indexOf('github') > -1) {
+                window.location.href = '/bingo-card/pages/number-picker/number-picker.html'
+            } else {
+                window.location.href = '/pages/number-picker/number-picker.html'
+            }
+        }
+    } else {
+        if (url.indexOf('github') > -1) {
+            window.location.href = '/bingo-card/pages/number-picker/number-picker.html'
+        } else {
+            window.location.href = '/pages/number-picker/number-picker.html'
+        }
+    }
 }
