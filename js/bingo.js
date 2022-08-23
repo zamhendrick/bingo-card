@@ -1,6 +1,8 @@
 const bingoCard = document.querySelector('#bingo_card');
 const bingoRow = bingoCard.querySelectorAll('tr');
 const tbody = document.querySelector('#bingo_card tbody');
+const clearCellsBtn = document.querySelector('#clear_cells_btn')
+const generateCardBtn = document.querySelector('#generate_card_btn')
 let numbersGenerated = false;
 
 function generateNumber() {
@@ -46,4 +48,12 @@ function clearCellColor() {
         bingoCell.classList.remove('colored-cell')
     })
     
+}
+
+clearCellsBtn.onclick = () => {
+    clearCellColor()
+}
+
+generateCardBtn.onclick = () => {
+    generateNumber()
 }
