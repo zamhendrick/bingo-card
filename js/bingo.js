@@ -3,6 +3,7 @@ const bingoRow = bingoCard.querySelectorAll('tr');
 const tbody = document.querySelector('#bingo_card tbody');
 const clearCellsBtn = document.querySelector('#clear_cells_btn')
 const generateCardBtn = document.querySelector('#generate_card_btn')
+const goToNumberPickerBtn = document.querySelector('#go_to_number_picker_btn')
 let numbersGenerated = false;
 
 function generateNumber() {
@@ -56,4 +57,8 @@ clearCellsBtn.onclick = () => {
 
 generateCardBtn.onclick = () => {
     generateNumber()
+}
+
+goToNumberPickerBtn.onclick = () => {
+    document.location.href = '/bingo-card/pages/number-picker/number-picker.html'
 }
