@@ -39,12 +39,14 @@ function pickNumber() {
         }
     } else {
         alert('Done!')
+        numbersDrawn = []
+        for (let i = 0; i < bingoCells.length + 1; i++) {
+            bingoCells[i].classList.remove('number-drawn')
+        }
     }
     
-    // console.log(bingoCells);
     for (const cell in bingoCells) {
         if (bingoCells[cell].innerText == randomNumber) {
-            // console.log(bingoCells[cell])
             bingoCells[cell].classList.add('number-drawn')
         }
     }

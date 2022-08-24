@@ -19,4 +19,12 @@ section#number_picker_container div#current_draw {
   font-weight: bold;
   text-align: center;
 }
+
+section#number_picker_container button {
+  border: none;
+  border-radius: 8px;
+  background-color: #25388d;
+  font-weight: bold;
+  color: white;
+}
 /*# sourceMappingURL=number-picker.css.map */

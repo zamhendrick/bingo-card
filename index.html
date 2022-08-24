@@ -38,9 +38,19 @@
                     </tr>
                 </table>
 
-                <!-- <input id="cell_highlight_color" type="color"> -->
+                <div class="flex w-full">
+                    <div class="flex flex-column w-full p-0.5">
+                        <label for="cell_highlight_color" class="mx-auto">Background Color</label>
+                        <input name="cell_highlight_color" type="color" class="w-full mx-auto">
+                    </div>
+                    <div class="flex flex-column w-full p-0.5">
+                        <label for="cell_tex_color" class="mx-auto">Text Color</label>
+                        <input name="cell_text_color" type="color" class="w-full mx-auto">
+                    </div>
+                </div>
+                
 
-                <button id="clear_cells_btn" class="w-full py-1 mt-1">Clear Colors</button>
+                <button id="clear_cells_btn" class="w-full py-1 mt-0.5">Clear Colors</button>
 
                 <button id="generate_card_btn" class="w-full py-1 mt-1">Generate Card</button>
 

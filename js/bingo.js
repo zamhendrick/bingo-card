@@ -4,8 +4,15 @@ const tbody = document.querySelector('#bingo_card tbody');
 const clearCellsBtn = document.querySelector('#clear_cells_btn')
 const generateCardBtn = document.querySelector('#generate_card_btn')
 const goToNumberPickerBtn = document.querySelector('#go_to_number_picker_btn')
+const cellHighlightColor = document.querySelector('[name="cell_highlight_color"]')
+const cellTextColor = document.querySelector('[name="cell_text_color"]')
+const defaultCellHighlight = '#910000'
+const defaultCellText = '#ffffff'
 const url = window.location.href
 let numbersGenerated = false;
+
+cellHighlightColor.value = defaultCellHighlight
+cellTextColor.value = defaultCellText
 
 function generateNumber() {
     var cardNumbers = [];
@@ -31,25 +38,38 @@ function generateNumber() {
     clearCellColor();
 }
 
-tbody.addEventListener('click', function(e) {
-    const bingoCell = e.target.closest('td');
-    const bingoCellClass = bingoCell.classList;
-    if (!bingoCell) {
-        return;
+tbody.onclick = (e) => {
+    if (numbersGenerated) {
+        const bingoCell = e.target.closest('td');
+        const bingoCellClass = bingoCell.classList;
+        if (!bingoCell) {
+            return;
+        }
+        if (!bingoCellClass.contains('colored-cell') && numbersGenerated && !bingoCellClass.contains('special-cell')) {
+            bingoCell.classList.add('colored-cell');
+            bingoCell.style.backgroundColor = cellHighlightColor.value;
+            bingoCell.style.color = cellTextColor.value;
+        } else {
+            bingoCellClass.remove('colored-cell');
+            bingoCell.style.backgroundColor = 'initial';
+            bingoCell.style.color = 'initial';
+        }
     }
-    if (!bingoCellClass.contains('colored-cell') && numbersGenerated && !bingoCellClass.contains('special-cell')) {
-        bingoCell.classList.add('colored-cell');
-    } else {
-        bingoCellClass.remove('colored-cell');
-    }
-    
-});
+}
 
 function clearCellColor() {
     document.querySelectorAll('.colored-cell').forEach((bingoCell) => {
         bingoCell.classList.remove('colored-cell')
     })
     
+}
+
+cellHighlightColor.onchange = (e) => {
+    console.log(e.target.value)
+}
+
+cellTextColor.onchange = (e) => {
+    console.log(e.target.value)
 }
 
 clearCellsBtn.onclick = () => {

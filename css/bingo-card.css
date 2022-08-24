@@ -21,8 +21,11 @@ section#bingo_card_container table#bingo_card tr td:hover {
   background-color: #f0f0f0;
 }
 
-section#bingo_card_container table#bingo_card tr td.colored-cell {
-  background-color: #910000;
+section#bingo_card_container button {
+  border: none;
+  border-radius: 8px;
+  background-color: #25388d;
+  font-weight: bold;
   color: white;
 }
 /*# sourceMappingURL=bingo-card.css.map */
