@@ -11,6 +11,8 @@ let numbersDrawn = []
 const currentDraw = document.querySelector('#current_draw')
 let bingoCells = document.querySelectorAll('td');
 
+console.log('Number Picker')
+
 function pickNumber() {
     let drawNumberBool = false
     if (numbersDrawn.length < 75) {
