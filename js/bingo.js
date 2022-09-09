@@ -14,9 +14,16 @@ let numbersGenerated = false;
 cellHighlightColor.value = defaultCellHighlight
 cellTextColor.value = defaultCellText
 
-function generateNumber() {
-    var cardNumbers = [];
+function clearCellColor() {
+    document.querySelectorAll('.colored-cell').forEach((bingoCell) => {
+        bingoCell.classList.remove('colored-cell')
+    })
+    
+}
 
+function generateNumber() {
+    clearCellColor();
+    var cardNumbers = [];
     for (let i = 1;  i < bingoRow.length; i++) {
         let bingoCell = bingoRow[i].querySelectorAll('td');
         let min = 1;
@@ -33,9 +40,7 @@ function generateNumber() {
             }
         }
     }
-
     numbersGenerated = true;
-    clearCellColor();
 }
 
 tbody.onclick = (e) => {
@@ -55,13 +60,6 @@ tbody.onclick = (e) => {
             bingoCell.style.color = 'initial';
         }
     }
-}
-
-function clearCellColor() {
-    document.querySelectorAll('.colored-cell').forEach((bingoCell) => {
-        bingoCell.classList.remove('colored-cell')
-    })
-    
 }
 
 cellHighlightColor.onchange = (e) => {
