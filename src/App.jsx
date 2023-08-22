@@ -6,7 +6,7 @@ import './styles/styles.css';
 function App() {
   return (
     <div className="app app-[bingo]">
-      <BrowserRouter>
+      <BrowserRouter basename="/bingo-card">
         <Routes>
           { routes && routes.map((route, index) => <Route key={ index } path={ route.path } element={ route.element } /> ) }
         </Routes>
