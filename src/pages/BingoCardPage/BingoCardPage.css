@@ -1,60 +1,107 @@
 .page-\[bingo_card\] {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
-    padding: 20px;
+    /* padding: 10px; */
 }
 
-.page-\[bingo_card\] .bingo_card {
+.page-\[bingo_card\] .row {
+    justify-content: center;
+}
+
+.page-\[bingo_card\] .row .bingo_card {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5px;
+    width: 100%;
+    max-width: 480px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #f9f9f9;
 }
 
-.page-\[bingo_card\] .bingo_card .bingo_card_cell {
-    padding: 15px;
+.page-\[bingo_card\] .row .bingo_card .bingo_card_cell {
+    /* height: 52px; */
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+
     text-align: center;
     font-size: 32px;
     line-height: 1;
-    user-select: none;
 }
 
-.page-\[bingo_card\] .bingo_card .bingo_card_cell:not(.special) {
+.page-\[bingo_card\] .row .bingo_card .bingo_card_cell:not(.special) {
     cursor: pointer;
 }
 
-.page-\[bingo_card\] .bingo_card .bingo_card_cell:not(.special):hover {
-    background-color: #f0f0f0;
+.page-\[bingo_card\] .row .bingo_card .bingo_card_cell:not(.special):hover {
+    background-color: rgba(0, 0, 0, 0.05);
     transition: 0.1s;
 }
 
-.page-\[bingo_card\] .bingo_card .bingo_card_cell.special {
+.page-\[bingo_card\] .row .bingo_card .bingo_card_cell.special {
     font-weight: 700;
 }
 
-.page-\[bingo_card\] .color_pickers {
-    display: flex;
-    justify-content: center;
+.page-\[bingo_card\] .row .color_pickers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* justify-content: center; */
     width: 100%;
-    padding: 10px;
+    max-width: 480px;
+    /* padding: 10px; */
 }
 
-.page-\[bingo_card\] .color_pickers .input_group {
+.page-\[bingo_card\] .row .color_pickers .input_group {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    padding: 10px;
+    width: 100%;
+    /* padding: 10px; */
 }
 
-.page-\[bingo_card\] .color_pickers .input_group label {
+.page-\[bingo_card\] .row .color_pickers .input_group .label {
     padding: 0 10px;
+    padding-top: 5px;
 }
 
-.page-\[bingo_card\] .buttons {
+.page-\[bingo_card\] .row .color_pickers .input_group .input {
+    width: 100%;
+    height: 42pt;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.page-\[bingo_card\] .row .buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 480px;
+    /* padding: 10px; */
+    padding-top: 0;
+}
+
+.page-\[bingo_card\] .row .buttons .button {
     width: 100%;
     padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.swal2-actions {
+    width: 100%;
+}
+
+.swal2-confirm, .swal2-cancel {
+    width: 40%;
 }

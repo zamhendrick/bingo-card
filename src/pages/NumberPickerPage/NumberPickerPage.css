@@ -1,0 +1,60 @@
+.page-\[number-picker\] {
+
+}
+
+.page-\[number-picker\] .row-\[header\] {
+    justify-content: space-between;
+}
+
+.page-\[number-picker\] .row-\[history\] {
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.page-\[number-picker\] .row-\[history\] .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0;
+}
+
+.page-\[number-picker\] .row-\[history\] .row .number-picker_cell.letter {
+    grid-row: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.page-\[number-picker\] .row-\[history\] .row .number-picker_cell {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    text-align: center;
+}
+
+.page-\[number-picker\] .row-\[history\] .row .number-picker_cell.picked {
+    background-color: #505050;
+    color: #ffffff;
+}
+
+.page-\[number-picker\] .row-\[result\] {
+    justify-content: center;
+}
+
+.page-\[number-picker\] .row-\[result\] .result {
+    font-size: 48px;
+}
+
+.page-\[number-picker\] .row-\[buttons\] {
+    flex-wrap: wrap;
+}
+
+.page-\[number-picker\] .row-\[buttons\] .button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+    font-size: 24px;
+}
