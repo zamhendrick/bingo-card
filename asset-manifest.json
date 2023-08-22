@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bingo-card/static/css/main.caa85f53.css",
+    "main.js": "/bingo-card/static/js/main.588041b6.js",
+    "index.html": "/bingo-card/index.html",
+    "main.caa85f53.css.map": "/bingo-card/static/css/main.caa85f53.css.map",
+    "main.588041b6.js.map": "/bingo-card/static/js/main.588041b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caa85f53.css",
+    "static/js/main.588041b6.js"
+  ]
+}
